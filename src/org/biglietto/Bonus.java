@@ -14,20 +14,32 @@ public class Bonus {
 		String status = null;
 		
 		int i = 0;
-		if(arrInv[i].equals(name)) {
-			while(arrInv[i].equals(name)) {
+		while(name.equals(arrInv[i])) {
+			if(name.equals(arrInv[i])) {
 				status = "Sei stato invitato " + name;
-				i++;
-			}			
-			System.out.println(status);
-		}
-		else {	
-			status = "Non sei stato invitato " + name;
-			System.out.println(status);
-		}
+				System.out.println(status);
+			}
+			else {	
+				status = "Non sei stato invitato " + name;
+				System.out.println(status);
+			}
+			i++;
+		}			
 
 		
 		System.out.println("Second method---------------------------");
+		
+//		if(arrInv[i].equals(name)) {
+//			for(int i=0; i<arrInv.length; i++){
+//				status = "Sei stato invitato " + name;
+//				i++;
+//			}			
+//			System.out.println(status);
+//		}
+//		else {	
+//			status = "Non sei stato invitato " + name;
+//			System.out.println(status);
+//		}
 		
 		
 		in.close();
