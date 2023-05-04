@@ -22,15 +22,15 @@ public class JavaBiglietto {
 	public static void discount(int km, int age) {
 		if(age < 18) {
 			double price = km * 0.8 * 0.21; 
-			System.out.println("Il prezzo del biglietto: " + price + " €");
+			System.out.println("Il prezzo del biglietto: " + String.format("%.2f", price) + " €");
 		}
 		else if(age > 65) {
 			double price = km * 0.6 * 0.21; 
-			System.out.println("Il prezzo del biglietto: " + price + " €");
+			System.out.println("Il prezzo del biglietto: " + String.format("%.2f", price) + " €");
 		}
 		else {
 			double price = km * 0.21; 
-			System.out.println("Il prezzo del biglietto: " + price + " €");
+			System.out.println("Il prezzo del biglietto: " + String.format("%.2f", price) + " €");
 		}
 	}
 }
