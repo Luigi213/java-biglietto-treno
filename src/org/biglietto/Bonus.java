@@ -14,13 +14,19 @@ public class Bonus {
 		
 		in.close();
 		
-		for(int i =0; i<arrInv.length; i++) {
-			String guest = arrInv[i];
-			
-			if(name.equals(guest)) {
-				System.out.println("Sei stato invitato " + name);
-				return;
-			}
+//		for(int i =0; i<arrInv.length; i++) {
+//			String guest = arrInv[i];
+//			
+//			if(name.equals(guest)) {
+//				System.out.println("Sei stato invitato " + name);
+//			}
+//		}
+		
+		int i = 0;
+		while(name.equals(arrInv[i])) {
+			System.out.println("Sei stato invitato " + name);
+			i++;
+			return;
 		}
 		
 		System.out.println("Non sei stato invitato " + name);
