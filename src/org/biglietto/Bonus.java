@@ -11,37 +11,18 @@ public class Bonus {
 		
 		System.out.println("Inserisci il nome");
 		String name = in.nextLine();
-		String status = null;
-		
-		int i = 0;
-		while(name.equals(arrInv[i])) {
-			if(name.equals(arrInv[i])) {
-				status = "Sei stato invitato " + name;
-				System.out.println(status);
-			}
-			else {	
-				status = "Non sei stato invitato " + name;
-				System.out.println(status);
-			}
-			i++;
-		}			
-
-		
-		System.out.println("Second method---------------------------");
-		
-//		if(arrInv[i].equals(name)) {
-//			for(int i=0; i<arrInv.length; i++){
-//				status = "Sei stato invitato " + name;
-//				i++;
-//			}			
-//			System.out.println(status);
-//		}
-//		else {	
-//			status = "Non sei stato invitato " + name;
-//			System.out.println(status);
-//		}
-		
 		
 		in.close();
+		
+		for(int i =0; i<arrInv.length; i++) {
+			String guest = arrInv[i];
+			
+			if(name.equals(guest)) {
+				System.out.println("Sei stato invitato " + name);
+				return;
+			}
+		}
+		
+		System.out.println("Non sei stato invitato " + name);
 	}
 }
